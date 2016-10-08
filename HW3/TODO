@@ -1,0 +1,7 @@
+In case of EU what if all the parents of utility node are given in evidence?
+Does MEU contains the variables which are non-decision nodes on left side of "|"
+rounding function 25.5 gives 26
+sequence of truth values during MEU
+check for EU(I = + | LI = +) both are decision nodes:
+    expected answer is : P(I+, D+ | LI+) * U(D+, I-) + P(D-, I+ | LI+) * U(I+, D-)
+write handle_3var_MEU()
