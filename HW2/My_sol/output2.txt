@@ -1,0 +1,159 @@
+
+============in FRESH FOL_BC_OR. goal = Bully(x)=======
+
+=======in fol_bc_or: rule==========: (((BeatUp(x, y) & ViterbiSquirrel(x)) & ViterbiSquirrel(y)) > Bully(x))
+in fol_bc_or: goal: Bully(x)
+in fol_bc_or: lhs: [BeatUp(v0, v1), ViterbiSquirrel(v0), ViterbiSquirrel(v1)]
+in fol_bc_or: rhs: Bully(v0)
+in fol_bc_or: theta: {} 
+
+Ask: Bully(_)
+
+==========in fol_bc_and: goals: [BeatUp(v0, v1), ViterbiSquirrel(v0), ViterbiSquirrel(v1)] ===========
+in fol_bc_and: theta: {v0: x}
+in fol_bc_and: first: BeatUp(v0, v1)
+in fol_bc_and: rest: [ViterbiSquirrel(v0), ViterbiSquirrel(v1)]
+
+============in FRESH FOL_BC_OR. goal = BeatUp(x, v1)=======
+
+=======in fol_bc_or: rule==========: BeatUp(Anakin, Luke)
+in fol_bc_or: goal: BeatUp(x, v1)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: BeatUp(Anakin, Luke)
+in fol_bc_or: theta: {v0: x} 
+
+Ask: BeatUp(_, _)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {x: Anakin, v0: x, v1: Luke}
+in fol_bc_and: not_goals theta: {x: Anakin, v0: x, v1: Luke}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {x: Anakin, v0: x, v1: Luke}$$$$$$
+True: BeatUp(Anakin, Luke)
+
+==========in fol_bc_and: goals: [ViterbiSquirrel(v0), ViterbiSquirrel(v1)] ===========
+in fol_bc_and: theta: {x: Anakin, v0: x, v1: Luke}
+in fol_bc_and: first: ViterbiSquirrel(v0)
+in fol_bc_and: rest: [ViterbiSquirrel(v1)]
+
+============in FRESH FOL_BC_OR. goal = ViterbiSquirrel(x)=======
+
+=======in fol_bc_or: rule==========: (EESquirrel(x) > ViterbiSquirrel(x))
+in fol_bc_or: goal: ViterbiSquirrel(x)
+in fol_bc_or: lhs: [EESquirrel(v8)]
+in fol_bc_or: rhs: ViterbiSquirrel(v8)
+in fol_bc_or: theta: {x: Anakin, v0: x, v1: Luke} 
+
+Ask: ViterbiSquirrel(Anakin)
+
+==========in fol_bc_and: goals: [EESquirrel(v8)] ===========
+in fol_bc_and: theta: {x: Anakin, v0: x, v1: Luke, v8: x}
+in fol_bc_and: first: EESquirrel(v8)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = EESquirrel(x)=======
+
+=======in fol_bc_or: rule==========: EESquirrel(Luke)
+in fol_bc_or: goal: EESquirrel(x)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: EESquirrel(Luke)
+in fol_bc_or: theta: {x: Anakin, v0: x, v1: Luke, v8: x} 
+
+Ask: EESquirrel(Anakin)
+False: EESquirrel(Anakin)
+
+=======in fol_bc_or: rule==========: (CSSquirrel(x) > ViterbiSquirrel(x))
+in fol_bc_or: goal: ViterbiSquirrel(x)
+in fol_bc_or: lhs: [CSSquirrel(v13)]
+in fol_bc_or: rhs: ViterbiSquirrel(v13)
+in fol_bc_or: theta: {x: Anakin, v0: x, v1: Luke} 
+
+Ask: ViterbiSquirrel(Anakin)
+
+==========in fol_bc_and: goals: [CSSquirrel(v13)] ===========
+in fol_bc_and: theta: {x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: first: CSSquirrel(v13)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = CSSquirrel(x)=======
+
+=======in fol_bc_or: rule==========: CSSquirrel(Yoda)
+in fol_bc_or: goal: CSSquirrel(x)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: CSSquirrel(Yoda)
+in fol_bc_or: theta: {x: Anakin, v0: x, v1: Luke, v13: x} 
+
+
+=======in fol_bc_or: rule==========: CSSquirrel(Anakin)
+in fol_bc_or: goal: CSSquirrel(x)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: CSSquirrel(Anakin)
+in fol_bc_or: theta: {x: Anakin, v0: x, v1: Luke, v13: x} 
+
+Ask: CSSquirrel(Anakin)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals theta: {x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {x: Anakin, v0: x, v1: Luke, v13: x}$$$$$$
+True: CSSquirrel(Anakin)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals theta: {x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {x: Anakin, v0: x, v1: Luke, v13: x}$$$$$$
+True: ViterbiSquirrel(Anakin)
+
+==========in fol_bc_and: goals: [ViterbiSquirrel(v1)] ===========
+in fol_bc_and: theta: {x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: first: ViterbiSquirrel(v1)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = ViterbiSquirrel(Luke)=======
+
+=======in fol_bc_or: rule==========: (EESquirrel(x) > ViterbiSquirrel(x))
+Ask: ViterbiSquirrel(Luke)
+in fol_bc_or: goal: ViterbiSquirrel(Luke)
+in fol_bc_or: lhs: [EESquirrel(v20)]
+in fol_bc_or: rhs: ViterbiSquirrel(v20)
+in fol_bc_or: theta: {x: Anakin, v0: x, v1: Luke, v13: x} 
+
+
+==========in fol_bc_and: goals: [EESquirrel(v20)] ===========
+in fol_bc_and: theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: first: EESquirrel(v20)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = EESquirrel(Luke)=======
+
+=======in fol_bc_or: rule==========: EESquirrel(Luke)
+Ask: EESquirrel(Luke)
+in fol_bc_or: goal: EESquirrel(Luke)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: EESquirrel(Luke)
+in fol_bc_or: theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x} 
+
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}$$$$$$
+True: EESquirrel(Luke)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}$$$$$$
+True: ViterbiSquirrel(Luke)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals theta: {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v20: Luke, x: Anakin, v0: x, v1: Luke, v13: x}$$$$$$
+True: Bully(Anakin)
+True

@@ -1,0 +1,194 @@
+
+============in FRESH FOL_BC_OR. goal = Traitor(Anakin)=======
+
+=======in fol_bc_or: rule==========: ((((ViterbiSquirrel(x) & Secret(y)) & Tells(x, y, z)) & Hostile(z)) > Traitor(x))
+Ask: Traitor(Anakin)
+in fol_bc_or: goal: Traitor(Anakin)
+in fol_bc_or: lhs: [ViterbiSquirrel(v0), Secret(v1), Tells(v0, v1, v2), Hostile(v2)]
+in fol_bc_or: rhs: Traitor(v0)
+in fol_bc_or: theta: {} 
+
+
+==========in fol_bc_and: goals: [ViterbiSquirrel(v0), Secret(v1), Tells(v0, v1, v2), Hostile(v2)] ===========
+in fol_bc_and: theta: {v0: Anakin}
+in fol_bc_and: first: ViterbiSquirrel(v0)
+in fol_bc_and: rest: [Secret(v1), Tells(v0, v1, v2), Hostile(v2)]
+
+============in FRESH FOL_BC_OR. goal = ViterbiSquirrel(Anakin)=======
+
+=======in fol_bc_or: rule==========: ViterbiSquirrel(Anakin)
+Ask: ViterbiSquirrel(Anakin)
+in fol_bc_or: goal: ViterbiSquirrel(Anakin)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: ViterbiSquirrel(Anakin)
+in fol_bc_or: theta: {v0: Anakin} 
+
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v0: Anakin}
+in fol_bc_and: not_goals theta: {v0: Anakin}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v0: Anakin}$$$$$$
+True: ViterbiSquirrel(Anakin)
+
+==========in fol_bc_and: goals: [Secret(v1), Tells(v0, v1, v2), Hostile(v2)] ===========
+in fol_bc_and: theta: {v0: Anakin}
+in fol_bc_and: first: Secret(v1)
+in fol_bc_and: rest: [Tells(v0, v1, v2), Hostile(v2)]
+
+============in FRESH FOL_BC_OR. goal = Secret(v1)=======
+
+=======in fol_bc_or: rule==========: (Resource(x) > Secret(x))
+in fol_bc_or: goal: Secret(v1)
+in fol_bc_or: lhs: [Resource(v13)]
+in fol_bc_or: rhs: Secret(v13)
+in fol_bc_or: theta: {v0: Anakin} 
+
+Ask: Secret(_)
+
+==========in fol_bc_and: goals: [Resource(v13)] ===========
+in fol_bc_and: theta: {v13: v1, v0: Anakin}
+in fol_bc_and: first: Resource(v13)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Resource(v1)=======
+
+=======in fol_bc_or: rule==========: Resource(Pine)
+in fol_bc_or: goal: Resource(v1)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Resource(Pine)
+in fol_bc_or: theta: {v13: v1, v0: Anakin} 
+
+Ask: Resource(_)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals theta: {v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v13: v1, v0: Anakin, v1: Pine}$$$$$$
+True: Resource(Pine)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals theta: {v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v13: v1, v0: Anakin, v1: Pine}$$$$$$
+True: Secret(Pine)
+
+==========in fol_bc_and: goals: [Tells(v0, v1, v2), Hostile(v2)] ===========
+in fol_bc_and: theta: {v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: first: Tells(v0, v1, v2)
+in fol_bc_and: rest: [Hostile(v2)]
+
+============in FRESH FOL_BC_OR. goal = Tells(Anakin, Pine, v2)=======
+
+=======in fol_bc_or: rule==========: ((Resource(x) & Knows(Sidious, x)) > Tells(Anakin, x, Sidious))
+in fol_bc_or: goal: Tells(Anakin, Pine, v2)
+in fol_bc_or: lhs: [Resource(v20), Knows(Sidious, v20)]
+in fol_bc_or: rhs: Tells(Anakin, v20, Sidious)
+in fol_bc_or: theta: {v13: v1, v0: Anakin, v1: Pine} 
+
+Ask: Tells(Anakin, Pine, _)
+
+==========in fol_bc_and: goals: [Resource(v20), Knows(Sidious, v20)] ===========
+in fol_bc_and: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: first: Resource(v20)
+in fol_bc_and: rest: [Knows(Sidious, v20)]
+
+============in FRESH FOL_BC_OR. goal = Resource(Pine)=======
+
+=======in fol_bc_or: rule==========: Resource(Pine)
+Ask: Resource(Pine)
+in fol_bc_or: goal: Resource(Pine)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Resource(Pine)
+in fol_bc_or: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine} 
+
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}$$$$$$
+True: Resource(Pine)
+
+==========in fol_bc_and: goals: [Knows(Sidious, v20)] ===========
+in fol_bc_and: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: first: Knows(Sidious, v20)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Knows(Sidious, Pine)=======
+
+=======in fol_bc_or: rule==========: Knows(Sidious, Pine)
+Ask: Knows(Sidious, Pine)
+in fol_bc_or: goal: Knows(Sidious, Pine)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Knows(Sidious, Pine)
+in fol_bc_or: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine} 
+
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}$$$$$$
+True: Knows(Sidious, Pine)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}$$$$$$
+True: Tells(Anakin, Pine, Sidious)
+
+==========in fol_bc_and: goals: [Hostile(v2)] ===========
+in fol_bc_and: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine}
+in fol_bc_and: first: Hostile(v2)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Hostile(Sidious)=======
+
+=======in fol_bc_or: rule==========: (Enemy(x, USC) > Hostile(x))
+Ask: Hostile(Sidious)
+in fol_bc_or: goal: Hostile(Sidious)
+in fol_bc_or: lhs: [Enemy(v32, USC)]
+in fol_bc_or: rhs: Hostile(v32)
+in fol_bc_or: theta: {v20: Pine, v2: Sidious, v13: v1, v0: Anakin, v1: Pine} 
+
+
+==========in fol_bc_and: goals: [Enemy(v32, USC)] ===========
+in fol_bc_and: theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}
+in fol_bc_and: first: Enemy(v32, USC)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Enemy(Sidious, USC)=======
+
+=======in fol_bc_or: rule==========: Enemy(Sidious, USC)
+Ask: Enemy(Sidious, USC)
+in fol_bc_or: goal: Enemy(Sidious, USC)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Enemy(Sidious, USC)
+in fol_bc_or: theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1} 
+
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}
+in fol_bc_and: not_goals theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}$$$$$$
+True: Enemy(Sidious, USC)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}
+in fol_bc_and: not_goals theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}$$$$$$
+True: Hostile(Sidious)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}
+in fol_bc_and: not_goals theta: {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v2: Sidious, v1: Pine, v0: Anakin, v20: Pine, v32: Sidious, v13: v1}$$$$$$
+True: Traitor(Anakin)
+True

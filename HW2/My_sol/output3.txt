@@ -1,0 +1,86 @@
+
+============in FRESH FOL_BC_OR. goal = Faster(Pat, x)=======
+
+=======in fol_bc_or: rule==========: ((Buffalo(x) & Pig(y)) > Faster(x, y))
+in fol_bc_or: goal: Faster(Pat, x)
+in fol_bc_or: lhs: [Buffalo(v0), Pig(v1)]
+in fol_bc_or: rhs: Faster(v0, v1)
+in fol_bc_or: theta: {} 
+
+Ask: Faster(Pat, _)
+
+==========in fol_bc_and: goals: [Buffalo(v0), Pig(v1)] ===========
+in fol_bc_and: theta: {v1: x, v0: Pat}
+in fol_bc_and: first: Buffalo(v0)
+in fol_bc_and: rest: [Pig(v1)]
+
+============in FRESH FOL_BC_OR. goal = Buffalo(Pat)=======
+
+=======in fol_bc_or: rule==========: Buffalo(Bob)
+Ask: Buffalo(Pat)
+in fol_bc_or: goal: Buffalo(Pat)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Buffalo(Bob)
+in fol_bc_or: theta: {v1: x, v0: Pat} 
+
+False: Buffalo(Pat)
+
+=======in fol_bc_or: rule==========: ((Pig(x) & Slug(y)) > Faster(x, y))
+in fol_bc_or: goal: Faster(Pat, x)
+in fol_bc_or: lhs: [Pig(v9), Slug(v10)]
+in fol_bc_or: rhs: Faster(v9, v10)
+in fol_bc_or: theta: {} 
+
+Ask: Faster(Pat, _)
+
+==========in fol_bc_and: goals: [Pig(v9), Slug(v10)] ===========
+in fol_bc_and: theta: {v10: x, v9: Pat}
+in fol_bc_and: first: Pig(v9)
+in fol_bc_and: rest: [Slug(v10)]
+
+============in FRESH FOL_BC_OR. goal = Pig(Pat)=======
+
+=======in fol_bc_or: rule==========: Pig(Pat)
+Ask: Pig(Pat)
+in fol_bc_or: goal: Pig(Pat)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Pig(Pat)
+in fol_bc_or: theta: {v10: x, v9: Pat} 
+
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v10: x, v9: Pat}
+in fol_bc_and: not_goals theta: {v10: x, v9: Pat}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v10: x, v9: Pat}$$$$$$
+True: Pig(Pat)
+
+==========in fol_bc_and: goals: [Slug(v10)] ===========
+in fol_bc_and: theta: {v10: x, v9: Pat}
+in fol_bc_and: first: Slug(v10)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Slug(x)=======
+
+=======in fol_bc_or: rule==========: Slug(Steve)
+in fol_bc_or: goal: Slug(x)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Slug(Steve)
+in fol_bc_or: theta: {v10: x, v9: Pat} 
+
+Ask: Slug(_)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v10: x, v9: Pat, x: Steve}
+in fol_bc_and: not_goals theta: {v10: x, v9: Pat, x: Steve}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v10: x, v9: Pat, x: Steve}$$$$$$
+True: Slug(Steve)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v10: x, v9: Pat, x: Steve}
+in fol_bc_and: not_goals theta: {v10: x, v9: Pat, x: Steve}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v10: x, v9: Pat, x: Steve}$$$$$$
+True: Faster(Pat, Steve)
+True

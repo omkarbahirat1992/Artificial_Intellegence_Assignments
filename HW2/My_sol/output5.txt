@@ -1,0 +1,314 @@
+
+============in FRESH FOL_BC_OR. goal = Aunt(Jane, Shelly)=======
+
+=======in fol_bc_or: rule==========: (((Woman(a) & Siblings(a, p)) & Parent(p, n)) > Aunt(a, n))
+Ask: Aunt(Jane, Shelly)
+in fol_bc_or: goal: Aunt(Jane, Shelly)
+in fol_bc_or: lhs: [Woman(v6), Siblings(v6, v7), Parent(v7, v8)]
+in fol_bc_or: rhs: Aunt(v6, v8)
+in fol_bc_or: theta: {} 
+
+
+==========in fol_bc_and: goals: [Woman(v6), Siblings(v6, v7), Parent(v7, v8)] ===========
+in fol_bc_and: theta: {v8: Shelly, v6: Jane}
+in fol_bc_and: first: Woman(v6)
+in fol_bc_and: rest: [Siblings(v6, v7), Parent(v7, v8)]
+
+============in FRESH FOL_BC_OR. goal = Woman(Jane)=======
+
+=======in fol_bc_or: rule==========: Woman(May)
+Ask: Woman(Jane)
+in fol_bc_or: goal: Woman(Jane)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Woman(May)
+in fol_bc_or: theta: {v8: Shelly, v6: Jane} 
+
+
+=======in fol_bc_or: rule==========: Woman(Jane)
+in fol_bc_or: goal: Woman(Jane)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Woman(Jane)
+in fol_bc_or: theta: {v8: Shelly, v6: Jane} 
+
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v8: Shelly, v6: Jane}
+in fol_bc_and: not_goals theta: {v8: Shelly, v6: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v8: Shelly, v6: Jane}$$$$$$
+True: Woman(Jane)
+
+==========in fol_bc_and: goals: [Siblings(v6, v7), Parent(v7, v8)] ===========
+in fol_bc_and: theta: {v8: Shelly, v6: Jane}
+in fol_bc_and: first: Siblings(v6, v7)
+in fol_bc_and: rest: [Parent(v7, v8)]
+
+============in FRESH FOL_BC_OR. goal = Siblings(Jane, v7)=======
+
+=======in fol_bc_or: rule==========: ((Parent(p, a) & Parent(p, b)) > Siblings(a, b))
+in fol_bc_or: goal: Siblings(Jane, v7)
+in fol_bc_or: lhs: [Parent(v9, v10), Parent(v9, v11)]
+in fol_bc_or: rhs: Siblings(v10, v11)
+in fol_bc_or: theta: {v8: Shelly, v6: Jane} 
+
+Ask: Siblings(Jane, _)
+
+==========in fol_bc_and: goals: [Parent(v9, v10), Parent(v9, v11)] ===========
+in fol_bc_and: theta: {v11: v7, v10: Jane, v8: Shelly, v6: Jane}
+in fol_bc_and: first: Parent(v9, v10)
+in fol_bc_and: rest: [Parent(v9, v11)]
+
+============in FRESH FOL_BC_OR. goal = Parent(v9, Jane)=======
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Peter)
+in fol_bc_or: goal: Parent(v9, Jane)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Peter)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v8: Shelly, v6: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Gary)
+in fol_bc_or: goal: Parent(v9, Jane)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Gary)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v8: Shelly, v6: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Jane)
+in fol_bc_or: goal: Parent(v9, Jane)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Jane)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v8: Shelly, v6: Jane} 
+
+Ask: Parent(_, Jane)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane}
+in fol_bc_and: not_goals theta: {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane}$$$$$$
+True: Parent(Kevin, Jane)
+
+==========in fol_bc_and: goals: [Parent(v9, v11)] ===========
+in fol_bc_and: theta: {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane}
+in fol_bc_and: first: Parent(v9, v11)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Parent(Kevin, v7)=======
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Peter)
+in fol_bc_or: goal: Parent(Kevin, v7)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Peter)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane} 
+
+Ask: Parent(Kevin, _)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}$$$$$$
+True: Parent(Kevin, Peter)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}$$$$$$
+True: Siblings(Jane, Peter)
+
+==========in fol_bc_and: goals: [Parent(v7, v8)] ===========
+in fol_bc_and: theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: first: Parent(v7, v8)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Parent(Peter, Shelly)=======
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Peter)
+Ask: Parent(Peter, Shelly)
+in fol_bc_or: goal: Parent(Peter, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Peter)
+in fol_bc_or: theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Gary)
+in fol_bc_or: goal: Parent(Peter, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Gary)
+in fol_bc_or: theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Jane)
+in fol_bc_or: goal: Parent(Peter, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Jane)
+in fol_bc_or: theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(May, Shelly)
+in fol_bc_or: goal: Parent(Peter, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(May, Shelly)
+in fol_bc_or: theta: {v7: Peter, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+False: Parent(Peter, Shelly)
+
+in fol_bc_or: rule: ((Parent(p, a) & Parent(p, b)) > Siblings(a, b))
+
+in fol_bc_or: rule: Parent(Kevin, Peter)
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Gary)
+in fol_bc_or: goal: Parent(Kevin, v7)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Gary)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane} 
+
+Ask: Parent(Kevin, _)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}$$$$$$
+True: Parent(Kevin, Gary)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}$$$$$$
+True: Siblings(Jane, Gary)
+
+==========in fol_bc_and: goals: [Parent(v7, v8)] ===========
+in fol_bc_and: theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: first: Parent(v7, v8)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Parent(Gary, Shelly)=======
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Peter)
+Ask: Parent(Gary, Shelly)
+in fol_bc_or: goal: Parent(Gary, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Peter)
+in fol_bc_or: theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Gary)
+in fol_bc_or: goal: Parent(Gary, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Gary)
+in fol_bc_or: theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Jane)
+in fol_bc_or: goal: Parent(Gary, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Jane)
+in fol_bc_or: theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(May, Shelly)
+in fol_bc_or: goal: Parent(Gary, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(May, Shelly)
+in fol_bc_or: theta: {v7: Gary, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+False: Parent(Gary, Shelly)
+
+in fol_bc_or: rule: ((Parent(p, a) & Parent(p, b)) > Siblings(a, b))
+
+in fol_bc_or: rule: Parent(Kevin, Gary)
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Jane)
+in fol_bc_or: goal: Parent(Kevin, v7)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Jane)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane} 
+
+Ask: Parent(Kevin, _)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}$$$$$$
+True: Parent(Kevin, Jane)
+
+==========in fol_bc_and: goals: [] ===========
+in fol_bc_and: theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: not_goals: goals: []
+$$$$$$$$$$FOL_BC_OR theta1 = {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}$$$$$$
+True: Siblings(Jane, Jane)
+
+==========in fol_bc_and: goals: [Parent(v7, v8)] ===========
+in fol_bc_and: theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane}
+in fol_bc_and: first: Parent(v7, v8)
+in fol_bc_and: rest: []
+
+============in FRESH FOL_BC_OR. goal = Parent(Jane, Shelly)=======
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Peter)
+Ask: Parent(Jane, Shelly)
+in fol_bc_or: goal: Parent(Jane, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Peter)
+in fol_bc_or: theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Gary)
+in fol_bc_or: goal: Parent(Jane, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Gary)
+in fol_bc_or: theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(Kevin, Jane)
+in fol_bc_or: goal: Parent(Jane, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(Kevin, Jane)
+in fol_bc_or: theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+
+=======in fol_bc_or: rule==========: Parent(May, Shelly)
+in fol_bc_or: goal: Parent(Jane, Shelly)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(May, Shelly)
+in fol_bc_or: theta: {v7: Jane, v6: Jane, v9: Kevin, v8: Shelly, v11: v7, v10: Jane} 
+
+False: Parent(Jane, Shelly)
+
+in fol_bc_or: rule: ((Parent(p, a) & Parent(p, b)) > Siblings(a, b))
+
+in fol_bc_or: rule: Parent(Kevin, Jane)
+
+=======in fol_bc_or: rule==========: Parent(May, Shelly)
+in fol_bc_or: goal: Parent(Kevin, v7)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(May, Shelly)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v9: Kevin, v8: Shelly, v6: Jane} 
+
+
+in fol_bc_or: rule: Parent(Kevin, Jane)
+
+=======in fol_bc_or: rule==========: Parent(May, Shelly)
+in fol_bc_or: goal: Parent(v9, Jane)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Parent(May, Shelly)
+in fol_bc_or: theta: {v11: v7, v10: Jane, v8: Shelly, v6: Jane} 
+
+
+in fol_bc_or: rule: Woman(Jane)
+
+=======in fol_bc_or: rule==========: Woman(Shelly)
+Ask: Woman(Jane)
+in fol_bc_or: goal: Woman(Jane)
+in fol_bc_or: lhs: []
+in fol_bc_or: rhs: Woman(Shelly)
+in fol_bc_or: theta: {v8: Shelly, v6: Jane} 
+
+False: Aunt(Jane, Shelly)
+False
